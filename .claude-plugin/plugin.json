@@ -1,0 +1,5 @@
+{
+  "name": "pr-sound",
+  "description": "Plays a chime when Claude Code creates a pull request with gh pr create",
+  "version": "1.0.0"
+}

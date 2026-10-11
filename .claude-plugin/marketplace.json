@@ -1,0 +1,13 @@
+{
+  "name": "pr-sound",
+  "owner": {
+    "name": "relatively-okay"
+  },
+  "plugins": [
+    {
+      "name": "pr-sound",
+      "source": "./",
+      "description": "Plays a chime when Claude Code creates a pull request with gh pr create"
+    }
+  ]
+}
