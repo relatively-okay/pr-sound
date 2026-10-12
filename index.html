@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pr-sound: hear the sounds</title>
+<style>
+  body { margin: 0; padding: 40px 16px; background: #0d1117; color: #e6edf3; font: 16px/1.5 system-ui, sans-serif; }
+  main { max-width: 720px; margin: 0 auto; }
+  h1 { margin: 0 0 4px; }
+  a { color: #22d3ee; }
+  figure { margin: 24px 0; padding: 12px; border: 2px solid #30363d; border-radius: 12px; }
+  figure:target { border-color: #8b5cf6; }
+  figure img { display: block; width: 100%; cursor: pointer; border-radius: 6px; }
+  audio { width: 100%; margin-top: 8px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>pr-sound</h1>
+  <p>Click a card to hear it. Back to the <a href="https://github.com/relatively-okay/pr-sound">repo</a>.</p>
+  <figure id="pr-create"><img src="media/pr-create.png" alt="pr-create.mp3"><audio controls preload="auto" src="sounds/pr-create.mp3"></audio></figure>
+  <figure id="misc-chime1"><img src="media/misc-chime1.png" alt="misc-chime1.mp3"><audio controls preload="auto" src="sounds/misc-chime1.mp3"></audio></figure>
+  <figure id="onetone"><img src="media/onetone.png" alt="onetone.mp3"><audio controls preload="auto" src="sounds/onetone.mp3"></audio></figure>
+  <figure id="tritone"><img src="media/tritone.png" alt="tritone.mp3"><audio controls preload="auto" src="sounds/tritone.mp3"></audio></figure>
+</main>
+<script>
+  const play = (fig) => { const a = fig.querySelector('audio'); a.currentTime = 0; a.play().catch(() => {}); };
+  document.querySelectorAll('figure img').forEach((img) => img.addEventListener('click', () => play(img.parentElement)));
+  // Arriving from a README card: try to play that sound. Browsers may block it until the first click.
+  const target = location.hash && document.getElementById(location.hash.slice(1));
+  if (target) play(target);
+</script>
+</body>
+</html>
