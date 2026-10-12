@@ -7,7 +7,7 @@
     {
       "name": "pr-sound",
       "source": "./",
-      "description": "Plays a chime when Claude Code creates a pull request with gh pr create"
+      "description": "Plays a chime when Claude Code creates a pull request with gh pr create, and when an issue-workflow phase ends"
     }
   ]
 }

@@ -1,6 +1,6 @@
 # pr-sound
 
-Claude Code plugin that plays a chime whenever Claude runs `gh pr create`.
+Claude Code plugin that plays a chime whenever Claude runs `gh pr create`, and another whenever Claude prints a line `ENDING WORKFLOW PHASE: <NAME>` (the `issue-workflow` skill's phase markers). The `CREATE-PR` phase gets no phase chime, since its PR chime already plays.
 
 ## Install
 

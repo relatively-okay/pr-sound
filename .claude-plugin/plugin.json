@@ -1,5 +1,5 @@
 {
   "name": "pr-sound",
-  "description": "Plays a chime when Claude Code creates a pull request with gh pr create",
-  "version": "1.0.0"
+  "description": "Plays a chime when Claude Code creates a pull request with gh pr create, and when an issue-workflow phase ends",
+  "version": "1.1.0"
 }
